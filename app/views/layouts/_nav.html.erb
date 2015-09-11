@@ -13,11 +13,15 @@
 				</button>
 				<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
 					<ul id="menu-main-menu" class="nav navbar-nav">
-						<li class="menu-item"><a href="/">Home</a></li>
+						<%= active_link_to 'Home', root_path, wrap_tag: :li, wrap_class: "menu-item" %>
+						<%= active_link_to 'Sponsors', sponsors_path, wrap_tag: :li, wrap_class: "menu-item" %>
+						<%= active_link_to 'Speakers', speakers_path, wrap_tag: :li, wrap_class: "menu-item" %>
+
+						<!-- <li class="menu-item"><a href="/">Home</a></li> -->
 						<!-- <li><a href="/usa/2015/agenda">Agenda</a></li> -->
-						<li><%= link_to 'Sponsors', sponsors_path %></li>
+						<!-- <li><%#= link_to 'Sponsors', sponsors_path %></li> -->
 						<!-- <li><a href="/sponsors">Sponsors</a></li> -->
-						<li><a href="/speakers">Speakers</a></li>
+						<!-- <li><a href="/speakers">Speakers</a></li> -->
 						<!-- <li><a href="/videos">Videos</a></li> -->
 						<!-- <li><a href="http://blog.lendit.co/">Blog</a></li> -->
 						<li class="menu-item menu-item-has-children dropdown">
@@ -32,7 +36,7 @@
 							</ul>
 						</li>
 						<li class="menu-item menu-item-has-children dropdown">
-							<a title="Content" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Content
+							<a title="Cont`ent" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Content
 								<span class="caret"></span>
 							</a>
 							<ul role="menu" class="dropdown-menu">
@@ -41,7 +45,8 @@
 								<%= active_link_to 'Podcasts', podcasts_path, wrap_tag: :li, wrap_class: "menu-item" %>
 							</ul>
 						</li>
-						<li><a href="/about">About</a></li>
+						<%= active_link_to 'About', about_path, wrap_tag: :li, wrap_class: "menu-item" %>
+						<!-- <li><a href="/about">About</a></li> -->
 						<li>
 							<!-- <div class="sold-out">LendIt USA<br>SOLD OUT</div> -->
 							<a href="http://register.lendit.co/d/yrqdh2/4W" onclick="_gaq.push(['_link', 'http://register.lendit.co/d/yrqdh2/4W']); return false;" target="_blank">Register</a>

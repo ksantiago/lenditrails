@@ -7,7 +7,7 @@ LenditRails::Application.routes.draw do
    get '/home' => 'home#landing'
 
   # get '/conferences' => 'welcome#home'
-  get '/about' => 'welcome#about'
+  get '/about' => 'welcome#about', as: :about
   get '/speakers' => 'speakers#index'
   get '/sponsors' => 'sponsors#index'
   # get '/speakers/sign-up' => 'speakers#sign-up'
