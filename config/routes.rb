@@ -1,5 +1,8 @@
 LenditRails::Application.routes.draw do
 
+  resources :conferences do
+    resources :videos 
+  end
 
   root 'welcome#home'
   # root 'conferences#china15'

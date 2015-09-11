@@ -7,71 +7,24 @@
 	<div class="row">
 		<div class="columns">
 			<h1>LendIt Videos</h1>
+			<% @featured_videos.each do |conference,videos| %>
+			<h3><%= link_to conference.title, conference_videos_path(conference) %></h3>
+			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+				<% videos.each do |video| %>
+					<li>
+						<%= link_to conference_video_path(conference,video), class: 'video-item' do %>
+							<div class="video-image">
+								<img src="<%= video.img %>" alt="<%= video.title %>">
+							</div>
+							<div class="video-title">
+								<%= raw video.title %>
+							</div>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+			<% end %>
 
-			<h3><a href="/china/2015/videos">LendIt China 2015</a></h3>
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-				<% @china15_videos.each do |video| %>
-					<li>
-						<%= link_to china15_video_path(video), class: 'video-item' do %>
-							<div class="video-image">
-								<img src="<%= video.img %>" alt="<%= video.title %>">
-							</div>
-							<div class="video-title">
-								<%= raw video.title %>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-			<!-- LendIt USA 2015 FEATURED VIDEOS -->
-			<h3><a href="/usa/2015/videos">LendIt USA 2015 </a></h3>
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-				<% @usa15_videos.each do |video| %>
-					<li>
-						<%= link_to usa15_video_path(video), class: 'video-item' do %>
-							<div class="video-image">
-								<img src="<%= video.img %>" alt="<%= video.title %>">
-							</div>
-							<div class="video-title">
-								<%= raw video.title %>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-			<!-- END of USA 2015 VIDEOS -->
-			<!-- LENDIT EUROPE 2014 FEATURED VIDEOS -->
-			<h3><a href="/europe/2014/videos">LendIt Europe 2014 </a></h3>
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-				<% @eu14_videos.each do |video| %>
-					<li>
-						<%= link_to eu14_video_path(video), class: 'video-item' do %>
-							<div class="video-image">
-								<img src="<%= video.img %>" alt="<%= video.title %>">
-							</div>
-							<div class="video-title">
-								<%= raw video.title %>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-			<!-- LENDIT USA 2014 FEATURED VIDEOS -->
-			<h3><a href="/usa/2014/videos">LendIt USA 2014 </a></h3>
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-				<% @usa14_videos.each do |video| %>
-					<li>
-						<%= link_to usa14_video_path(video), class: 'video-item' do %>
-							<div class="video-image">
-								<img src="<%= video.img %>" alt="<%= video.title %>">
-							</div>
-							<div class="video-title">
-								<%= raw video.title %>
-							</div>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
 		</div>
 	</div>
 </div>
