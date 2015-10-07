@@ -675,10 +675,8 @@
 			img {
 				display:block;
 				width:100%;
-
 			}
 			margin-bottom:1em;
-
 		}
 	}
 	.p2pfa-info-title {
@@ -688,8 +686,6 @@
 	.p2pfa-info-title {
 		max-width:400px;
 		margin:auto;
-		
-
 	}
 	.p2pfa-info-text {
 		max-width:400px;
@@ -700,7 +696,6 @@
 			a {
 				margin-bottom:0;
 				max-width:none;
-				
 			}
 			vertical-align:middle;
 			display:table-cell;
@@ -710,7 +705,6 @@
 			padding-left:20px;
 		}
 		.p2pfa-info {
-
 			vertical-align:middle;
 			display:table-cell;
 			width:45%;
@@ -723,9 +717,31 @@
 		}
 		.p2pfa-info-title {
 			font-size:15px;
-				margin:auto;
-			
+			margin:auto;
 		}
+	}
 
+	
+}
+.europe-2015 {
+	.venue-info {
+		p {
+			margin-top:1em;
+			margin-bottom:1em;
+			font-size:20px;
+		}
+		.info-section {
+		}
+		.info-hotel {
+		}
+		.info-cocktail {
+		}
+	}
+	.hilton-image {
+		margin-top:2em;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		height:200px;
 	}
 }
