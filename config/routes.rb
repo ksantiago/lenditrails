@@ -5,7 +5,7 @@ LenditRails::Application.routes.draw do
   root 'conferences#eu15'
 
   # get '/home' => 'home#landing'
-  get '/register' => 'welcome#regdown'
+  # get '/register' => 'welcome#regdown'
 
   # get '/conferences' => 'welcome#home'
   get '/about' => 'welcome#about'
@@ -20,7 +20,7 @@ LenditRails::Application.routes.draw do
   get '/photos' => 'photos#usa15'
   get '/privacy' => 'welcome#privacy'
   # get '/live' => 'videos#live'
-  get '/china-pavilion-live' => 'videos#china_live'
+  # get '/china-pavilion-live' => 'videos#china_live'
   get '/live', to: redirect('/videos', status: 301)
   get '/attendees' => 'attendees#go_to_eu15'
   get '/volunteers' => 'welcome#volunteers'
@@ -63,7 +63,7 @@ LenditRails::Application.routes.draw do
   # LendIt China 2015
   get '/china' => 'conferences#china15'
   get '/china/2015' => 'conferences#go_to_china'
-  get '/china/2015/speakers/sign-up' => 'speakers#china15_sign-up'
+  # get '/china/2015/speakers/sign-up' => 'speakers#china15_sign-up'
   get '/china/2015/itinerary' => 'agendas#china15'
   get '/china/2015/china-app-show' => 'conferences#china15_china_app'
   get '/china/2015/bund-summit' => 'conferences#china15_bund_summit'
@@ -86,13 +86,12 @@ LenditRails::Application.routes.draw do
   get '/usa/2015/agenda' => 'agendas#usa15'
   get '/usa/2015/pre-conference-workshops' => 'agendas#usa15_workshops'
   get '/usa/2015/floorplan' => 'conferences#usa15_floorplan'
-  get '/us/2015/exhibitors' => 'exhibitors#usa15'
   get '/usa/2015/attendees' => 'attendees#usa15'
   get '/usa/2015/beijing-invite' => 'conferences#usa15_beijing_invite-update'
   get '/usa/2015/brochure', to: redirect('https://s3-us-west-2.amazonaws.com/lendit/uploads/LendIt-USA-2015-conference-brochure.pdf', status: 301)
   get '/usa/2015/pitchit-at-lendit' => 'conferences#usa15_pitchit'
   get '/usa/2015/podcasts' => 'podcasts#usa15'
-  get '/usa/2015/pitchit/submitted' => 'conferences#usa15_pitchit_submitted'
+  # get '/usa/2015/pitchit/submitted' => 'conferences#usa15_pitchit_submitted'
 
   #LendIt Europe 2014
   # get '/europe' => 'conferences#eu14'
@@ -116,7 +115,7 @@ LenditRails::Application.routes.draw do
 
 
   # 301 redirects with GA tracking codes
-  get '/sharecast' => 'conferences#sharecast'
+  # get '/sharecast' => 'conferences#sharecast'
   # 301 redirects from old WP site
   get '/speaker' => 'welcome#go_to_speakers'
   get '/speaker/:id' => 'welcome#go_to_speakers'
