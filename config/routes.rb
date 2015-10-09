@@ -128,11 +128,7 @@ LenditRails::Application.routes.draw do
   get '/presentations/Michael-Barr-LendiIt-2014.pdf' => 'welcome#barr_2014_deck'
   get '/presentations/Chales-Moldow-Foundation-Capital-LendIt-2014.pdf' => 'welcome#moldow_2014_deck'
   get '/presentations/Securitization-Panel-LendIt-2014.pdf' => 'welcome#securitization_panel_2014_deck'
-  # get '/blog', to: redirect("http://blog.lendit.co", status: 301)
   get '/videos-2', to: redirect("/videos", status: 301)
-
-
-  # 302 redirect to be updated to 301 once Wistia is configured
   get '/event', to: redirect('/about', status: 302)
   get '/event/:id', to: redirect('/about', status: 302)
   get '/lendit2013', to: redirect('/about', status: 302)
